@@ -387,6 +387,10 @@ export default class VideoPlayer extends Component {
     this.showControls();
   }
 
+  start() {
+    if (!this.state.isStarted) this.onStartPress();
+  }
+
   presentFullscreenPlayer() {
     this.player && this.player.presentFullscreenPlayer();
   }
